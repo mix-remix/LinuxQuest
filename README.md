@@ -32,3 +32,7 @@ gcc -Wall -o treasure_hub treasure_hub.c
 gcc -Wall -o monitor monitor.c
 gcc -Wall -o score_calculator score_calculator.c
 gcc -Wall -o treasure_manager treasure_manager.c
+```
+
+### Use ./treasure_manager for administrative setup and modification of hunt data.
+### Use ./treasure_hub for the interactive console.
