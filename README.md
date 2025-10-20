@@ -1,6 +1,6 @@
 # LinuxQuest
 
-LinuxQuest is a command-line application suite built in **C** for managing and monitoring data related to multiple concurrent treasure hunts. It leverages **inter-process communication** via pipes and signals to provide a real-time monitoring interface and uses separate utility executables for score calculation and data management.
+LinuxQuest is a command-line application suite built in C for managing and monitoring data related to multiple concurrent treasure hunts. It leverages inter-process communication via pipes and signals to provide a real-time monitoring interface and uses separate utility executables for score calculation and data management.
 
 ---
 
@@ -9,8 +9,8 @@ LinuxQuest is a command-line application suite built in **C** for managing and m
 The system is split into multiple distinct components that communicate using standard UNIX features like signals, pipes, and file I/O:
 
 * **`treasure_hub`**
-    * primary user interface
-    * manages the lifecycle of the monitor process, spawns temporary `score_calculator` processes, and uses a pipe to communicate with and receive output from the monitor.
+    - primary user interface
+    - manages the lifecycle of the monitor process, spawns temporary `score_calculator` processes, and uses a pipe to communicate with and receive output from the monitor.
 * **`monitor`**
     * process that waits for a **`SIGUSR1`** signal
     * upon receiving the signal, it reads a command from the `commands.txt` file, executes a data query, and writes the output back to the pipe connected to `treasure_hub`.
