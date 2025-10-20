@@ -8,7 +8,7 @@ LinuxQuest is a command-line application suite built in C for managing and monit
 
 The system is split into multiple distinct components that communicate using standard UNIX features like signals, pipes, and file I/O:
 
-* **treasure_hub**
+**`treasure_hub`**
     - primary user interface
     - manages the lifecycle of the monitor process, spawns temporary `score_calculator` processes, and uses a pipe to communicate with and receive output from the monitor.
 * **`monitor`**
